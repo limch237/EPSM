@@ -1,0 +1,60 @@
+{
+	"ActionBar": {
+		"Items": [{
+			"OnPress": "/ESPM/Actions/CloseModalPage_Cancel.action",
+			"Position": "left",
+			"SystemItem": "Cancel"
+		}, {
+			"OnPress": "/ESPM/Actions/PurchaseOrders/PurchaseOrders_CreateEntity.action",
+			"Position": "right",
+			"SystemItem": "Save"
+		}]
+	},
+	"Caption": "$(L,'create_purchase_order')",
+	"Controls": [{
+		"Sections": [{
+			"Controls": [
+				{
+					"Caption": "PurchaseOrder ID",
+					"IsEditable": false,
+					"PlaceHolder": "value",
+					"Value": "/ESPM/Rules/PurchaseOrders/PurchaseOrders_GenerateNextPOId.js",
+					"_Name": "poIdPrp",
+					"_Type": "Control.Type.FormCell.SimpleProperty"
+				},
+				{
+					"AllowEmptySelection": true,
+					"AllowMultipleSelection": false,
+					"Caption": "Supplier",
+					"PickerItems": {
+						"DisplayValue": "{SupplierId} - {SupplierName}",
+						"ReturnValue": "{SupplierId}",
+						"Target": {
+							"EntitySet": "Suppliers",
+							"Service": "/ESPM/Services/ESPM.service",
+							"UniqueIdType": "Integer"
+						}
+					},
+					"PickerPrompt": "Choose Supplier from",
+					"Value": "100000048",
+					"_Name": "supplierPkr",
+					"_Type": "Control.Type.FormCell.ListPicker"
+				},
+				{
+					"AllowEmptySelection": true,
+					"AllowMultipleSelection": false,
+					"Caption": "Currency",
+					"PickerItems": "/ESPM/Rules/Common/CurrencyPickerItems.js",
+					"PickerPrompt": "Select Currency ",
+					"Value": "EUR",
+					"_Name": "currencyPkr",
+					"_Type": "Control.Type.FormCell.ListPicker"
+				}
+			]
+		}],
+		"_Name": "FormCellContainer",
+		"_Type": "Control.Type.FormCellContainer"
+	}],
+	"_Type": "Page",
+	"_Name": "PurchaseOrders_Create"
+}

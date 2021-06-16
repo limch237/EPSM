@@ -1,0 +1,49 @@
+{
+	"Caption": "$(L,'purchase_orders')",
+	"ActionBar": {
+		"Items": [{
+			"OnPress": "/ESPM/Actions/PurchaseOrders/NavToPurchaseOrders_Create.action",
+			"Position": "right",
+			"SystemItem": "Add"
+		}]
+	},
+	"Controls": [{
+		"Sections": [{
+			"Header": {
+				"UseTopPadding": false
+			},
+			"ObjectCell": {
+				"AccessoryType": "disclosureIndicator",
+				"Description": "{SupplierId}",
+				"DetailImage": "",
+				"DetailImageIsCircular": false,
+				"Icons": [],
+				"OnPress": "/ESPM/Actions/PurchaseOrders/NavToPurchaseOrders_Detail.action",
+				"StatusImage": "",
+				"Title": "{PurchaseOrderId}",
+				"Footnote": "{CurrencyCode}",
+				"PreserveIconStackSpacing": true,
+				"StatusText": "{NetAmount}",
+				"Subhead": "{GrossAmount}",
+				"SubstatusText": "{TaxAmount}"
+			},
+			"Search": {
+				"Enabled": true,
+				"Placeholder": "$(L,'search')",
+				"BarcodeScanner": true,
+				"Delay": 500,
+				"MinimumCharacterThreshold": 3
+			},
+			"Target": {
+				"EntitySet": "PurchaseOrderHeaders",
+				"Service": "/ESPM/Services/ESPM.service",
+				"QueryOptions": "$expand=Items"
+			},
+			"_Type": "Section.Type.ObjectTable"
+		}],
+		"_Type": "Control.Type.SectionedTable",
+		"_Name": "SectionedTable"
+	}],
+	"_Type": "Page",
+	"_Name": "PurchaseOrders_List"
+}

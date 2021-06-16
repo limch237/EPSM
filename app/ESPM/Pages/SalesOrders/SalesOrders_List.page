@@ -1,0 +1,49 @@
+{
+	"Caption": "$(L,'sales_orders')",
+	"ActionBar": {
+		"Items": [{
+			"OnPress": "/ESPM/Actions/SalesOrders/NavToSalesOrders_Create.action",
+			"Position": "right",
+			"SystemItem": "Add"
+		}]
+	},
+	"Controls": [{
+		"Sections": [{
+			"Header": {
+				"UseTopPadding": false
+			},
+			"ObjectCell": {
+				"AccessoryType": "disclosureIndicator",
+				"Description": "",
+				"DetailImage": "",
+				"DetailImageIsCircular": false,
+				"Icons": [],
+				"OnPress": "/ESPM/Actions/SalesOrders/NavToSalesOrders_Detail.action",
+				"StatusImage": "",
+				"Title": "{SalesOrderId}",
+				"Footnote": "",
+				"PreserveIconStackSpacing": false,
+				"StatusText": "$(N,{NetAmount},'',{minimumFractionDigits:2,useGrouping:true})",
+				"Subhead": "{CustomerId}",
+				"SubstatusText": "{CurrencyCode}"
+			},
+			"Search": {
+				"Enabled": true,
+				"Placeholder": "$(L,'search')",
+				"BarcodeScanner": true,
+				"Delay": 500,
+				"MinimumCharacterThreshold": 3
+			},
+			"Target": {
+				"EntitySet": "SalesOrderHeaders",
+				"Service": "/ESPM/Services/ESPM.service",
+				"QueryOptions": ""
+			},
+			"_Type": "Section.Type.ObjectTable"
+		}],
+		"_Type": "Control.Type.SectionedTable",
+		"_Name": "SectionedTable"
+	}],
+	"_Type": "Page",
+	"_Name": "SalesOrders_List"
+}

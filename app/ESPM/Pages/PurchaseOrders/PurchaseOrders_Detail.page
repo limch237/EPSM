@@ -1,0 +1,122 @@
+{
+	"Caption": "$(L,'purchase_order_details')",
+	"ActionBar": {
+		"Items": [{
+			"OnPress": "/ESPM/Actions/PurchaseOrders/NavToPurchaseOrders_CreateItem.action",
+			"Position": "right",
+			"Text": "Add Item"
+		}]
+	},
+	"Controls": [{
+		"Sections": [{
+			"ObjectHeader": {
+				"DetailImage": "",
+				"HeadlineText": "{PurchaseOrderId}",
+				"Subhead": "",
+				"Tags": [],
+				"BodyText": "",
+				"Footnote": "",
+				"Description": "",
+				"StatusText": "{GrossAmount}",
+				"StatusImage": "",
+				"SubstatusImage": "",
+				"SubstatusText": "{CurrencyCode}"
+			},
+			"_Type": "Section.Type.ObjectHeader"
+		}, {
+			"EmptySection": {
+				"Caption": "$(L,'no_order')"
+			},
+			"Header": {
+				"Caption": "Items",
+				"Grid": {
+					"Items": [
+						{
+							"NumberOfLines": 1,
+							"Text": "Product ID"
+						},
+						{
+							"NumberOfLines": 1,
+							"Text": "Quantity"
+						},
+						{
+							"NumberOfLines": 1,
+							"Text": "Net Amt",
+							"TextAlignment": "right"
+						},
+						{
+							"NumberOfLines": 1,
+							"Text": "Tax Amt",
+							"TextAlignment": "right"
+						},
+						{
+							"NumberOfLines": 1,
+							"Text": "Gross Amt",
+							"TextAlignment": "right"
+						},
+						{
+							"NumberOfLines": 1,
+							"Text": "Currency"
+						}
+					]
+				},
+				"UseTopPadding": true
+			},
+			"Row": {
+				"AccessoryType": "none",
+				"Items": [
+					{
+						"NumberOfLines": 1,
+						"Text": "{ProductId}"
+					},
+					{
+						"NumberOfLines": 1,
+						"Text": "{Quantity} {QuantityUnit}"
+					},
+					{
+						"NumberOfLines": 1,
+						"Text": "$(C,{NetAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+						"TextAlignment": "right"
+					},
+					{
+						"NumberOfLines": 1,
+						"Text": "$(C,{TaxAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+						"TextAlignment": "right"
+					},
+					{
+						"NumberOfLines": 1,
+						"Text": "$(C,{GrossAmount},{CurrencyCode},'',{maximumFractionDigits:2,useGrouping:true})",
+						"TextAlignment": "right"
+					},
+					{
+						"NumberOfLines": 1,
+						"Text": "{CurrencyCode}"
+					}
+				],
+				"Layout": {
+					"ColumnWidthPercentage": [
+						0.2,
+						-1,
+						0.15,
+						0.15,
+						0.15,
+						0.15
+					]
+				}
+			},
+			"Target": {
+				"EntitySet": "PurchaseOrderItems",
+				"QueryOptions": "$filter=PurchaseOrderId eq '{PurchaseOrderId}'",
+				"Service": "/ESPM/Services/ESPM.service"
+			},
+			"DataSubscriptions": [
+				"PurchaseOrderItems"
+			],
+			"_Type": "Section.Type.GridTable"
+		}],
+		"_Type": "Control.Type.SectionedTable",
+		"_Name": "SectionedTable"
+	}],
+	"_Type": "Page",
+	"_Name": "PurchaseOrders_Detail"
+}

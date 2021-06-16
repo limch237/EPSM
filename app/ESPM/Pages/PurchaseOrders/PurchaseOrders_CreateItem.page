@@ -1,0 +1,124 @@
+{
+	"ActionBar": {
+		"Items": [
+			{
+				"OnPress": "/ESPM/Actions/CloseModalPage_Cancel.action",
+				"Position": "left",
+				"SystemItem": "Cancel",
+				"Text": "Item"
+			},
+			{
+				"OnPress": "/ESPM/Actions/PurchaseOrders/PurchaseOrders_CreateItemEntity.action",
+				"Position": "right",
+				"SystemItem": "Save",
+				"Text": "Item"
+			}
+		]
+	},
+	"Caption": "$(L,'create_purchase_order_item')",
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Controls": [
+						{
+							"Caption": "PurchaseOrder ID",
+							"IsEditable": false,
+							"PlaceHolder": "value",
+							"Value": "{PurchaseOrderId}",
+							"_Name": "poIdPrp",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Item Number",
+							"IsEditable": false,
+							"PlaceHolder": "value",
+							"Value": "/ESPM/Rules/PurchaseOrders/PurchaseOrders_GenerateNextPOItemNumber.js",
+							"_Name": "itemNbrPrp",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"AllowEmptySelection": false,
+							"AllowMultipleSelection": false,
+							"IsSelectedSectionEnabled": true,
+							"Caption": "Product",
+							"PickerItems": {
+								"DisplayValue": "{ProductId} - {Name}",
+								"ReturnValue": "{ProductId}",
+								"Target": {
+									"EntitySet": "Products",
+									"Service": "/ESPM/Services/ESPM.service",
+									"UniqueIdType": "Integer"
+								}
+							},
+							"PickerPrompt": "Select Product",
+							"OnValueChange": "/ESPM/Rules/PurchaseOrders/PurchaseOrders_DataOnValueChange.js",
+							"IsPickerDismissedOnSelection": true,
+							"Value": "HT-1037",
+							"_Name": "productPkr",
+							"_Type": "Control.Type.FormCell.ListPicker"
+						},
+						{
+							"Caption": "Currency Code",
+							"IsEditable": false,
+							"_Name": "currencyPrp",
+							"Value": "EUR",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Quantity",
+							"AllowEmptySelection": false,
+							"AllowMultipleSelection": false,
+							"IsEditable": true,
+							"IsVisible": true,
+							"IsSelectedSectionEnabled": true,
+							"PickerPrompt": "Pick Quantity",
+							"Value":"1",
+							"PickerItems":[
+								"1",
+								"2",
+								"3",
+								"4",
+								"5",
+								"6",
+								"7",
+								"8",
+								"9",
+								"10"
+							],
+							"OnValueChange": "/ESPM/Rules/PurchaseOrders/PurchaseOrders_DataOnValueChange.js",
+							"IsPickerDismissedOnSelection": true,
+							"_Name": "quantityPkr",
+							"_Type": "Control.Type.FormCell.ListPicker"
+						},
+						{
+							"Caption": "Net Amount",
+							"IsEditable": false,
+							"Value": "1230.00",
+							"_Name": "netAmtPrp",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Tax",
+							"IsEditable": false,
+							"Value": "61.50",
+							"_Name": "taxPrp",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "Gross Amount",
+							"IsEditable": false,
+							"Value": "1291.50",
+							"_Name": "grossAmtPrp",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "FormCellContainer",
+			"_Type": "Control.Type.FormCellContainer"
+		}
+	],
+	"_Name": "PurchaseOrders_CreateItem",
+	"_Type": "Page"
+}

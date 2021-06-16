@@ -1,0 +1,60 @@
+{
+	"ActionBar": {
+		"Items": [{
+			"OnPress": "/ESPM/Actions/CloseModalPage_Cancel.action",
+			"Position": "left",
+			"SystemItem": "Cancel"
+		}, {
+			"OnPress": "/ESPM/Actions/SalesOrders/SalesOrders_CreateEntity.action",
+			"Position": "right",
+			"SystemItem": "Save"
+		}]
+	},
+	"Caption": "$(L,'create_sales_order')",
+	"Controls": [{
+		"Sections": [{
+			"Controls": [
+				{
+					"Caption": "SalesOrder Id",
+					"IsEditable": false,
+					"PlaceHolder": "value",
+					"Value": "/ESPM/Rules/SalesOrders/SalesOrders_GenerateNextSOId.js",
+					"_Name": "SOIdPrp",
+					"_Type": "Control.Type.FormCell.SimpleProperty"
+				},
+				{
+					"AllowEmptySelection": true,
+					"AllowMultipleSelection": false,
+					"Caption": "Customer",
+					"PickerItems": {
+						"DisplayValue": "{FirstName}, {LastName}",
+						"ReturnValue": "{CustomerId}",
+						"Target": {
+							"EntitySet": "Customers",
+							"Service": "/ESPM/Services/ESPM.service",
+							"UniqueIdType": "Integer"
+						}
+					},
+					"PickerPrompt": "Choose Supplier from",
+					"Value": "100000037",
+					"_Name": "customerPkr",
+					"_Type": "Control.Type.FormCell.ListPicker"
+				},
+				{
+					"AllowEmptySelection": true,
+					"AllowMultipleSelection": false,
+					"Caption": "Currency",
+					"PickerItems": "/ESPM/Rules/Common/CurrencyPickerItems.js",
+					"PickerPrompt": "Select Currency ",
+					"Value": "EUR",
+					"_Name": "currencyPkr",
+					"_Type": "Control.Type.FormCell.ListPicker"
+				}
+			]
+		}],
+		"_Name": "FormCellContainer",
+		"_Type": "Control.Type.FormCellContainer"
+	}],
+	"_Type": "Page",
+	"_Name": "SalesOrders_Create"
+}
