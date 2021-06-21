@@ -48,6 +48,7 @@ entity Products {
   UpdatedTimestamp : DateTime;
   Weight : Decimal(13, 3);
   WeightUnit : String(3);
+  Image : LargeBinary @Core.MediaType;
   StockDetails : Association to Stock on StockDetails.ProductId = ProductId;
   SupplierDetails : Association to Suppliers on SupplierDetails.SupplierId = SupplierId;
 }
@@ -130,5 +131,5 @@ entity Suppliers {
   key SupplierId : String(10);
   SupplierName : String(80);
   UpdatedTimestamp : DateTime;
-  Products : Association[*, 1] to Products on Products.SupplierId = SupplierId;
+  Products : Association to many Products on Products.SupplierId = SupplierId;
 }
