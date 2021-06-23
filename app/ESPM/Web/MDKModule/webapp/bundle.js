@@ -362,7 +362,7 @@ module.exports = {"_Type":"Action.Type.Navigation","PageToOpen":"/ESPM/Pages/Pro
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {"_Type":"Action.Type.ODataService.UpdateEntity","Target":{"EntitySet":"Products","Service":"/ESPM/Services/ESPM.service","ReadLink":"{@odata.readLink}"},"Properties":{"Category":"#Control:ProductCategory/#SelectedValue","CategoryName":"#Control:ProductCategory/#SelectedValue","CurrencyCode":"#Control:ProductCurrencyCode/#Value","DimensionDepth":"#Control:ProductDepth/#Value","DimensionHeight":"#Control:ProductHeight/#Value","DimensionUnit":"#Control:ProductDimensionUnit/#Value","DimensionWidth":"#Control:ProductWidth/#Value","Name":"#Control:ProductName/#Value","Price":"#Control:ProductPrice/#Value","ShortDescription":"#Control:ProductDescription/#Value","Weight":"#Control:ProductWeight/#Value","WeightUnit":"#Control:ProductWeightUnit/#Value","SupplierId":"#Control:productSupplierID/#SelectedValue"},"UpdateLinks":[],"ActionResult":{"_Name":"update"},"ShowActivityIndicator":true,"OnSuccess":"/ESPM/Actions/UpdateEntitySuccessMessage.action","OnFailure":"/ESPM/Actions/UpdateEntityFailureMessage.action"}
+module.exports = {"_Type":"Action.Type.ODataService.UpdateEntity","Target":{"EntitySet":"Products","Service":"/ESPM/Services/ESPM.service","ReadLink":"{@odata.readLink}"},"Properties":{"Category":"#Control:ProductCategory/#SelectedValue","CategoryName":"#Control:ProductCategory/#SelectedValue","CurrencyCode":"#Control:ProductCurrencyCode/#Value","DimensionDepth":"#Control:ProductDepth/#Value","DimensionHeight":"#Control:ProductHeight/#Value","DimensionUnit":"#Control:ProductDimensionUnit/#Value","DimensionWidth":"#Control:ProductWidth/#Value","Name":"#Control:ProductName/#Value","Price":"#Control:ProductPrice/#Value","ShortDescription":"#Control:ProductDescription/#Value","Weight":"#Control:ProductWeight/#Value","WeightUnit":"#Control:ProductWeightUnit/#Value","SupplierId":"#Control:productSupplierID/#SelectedValue"},"UpdateLinks":[],"Headers":{"Accept":"application/json;IEEE754Compatible=true;ExponentialDecimals=false"},"ActionResult":{"_Name":"update"},"ShowActivityIndicator":true,"OnSuccess":"/ESPM/Actions/UpdateEntitySuccessMessage.action","OnFailure":"/ESPM/Actions/UpdateEntityFailureMessage.action"}
 
 /***/ }),
 
@@ -428,7 +428,7 @@ module.exports = {"CreateLinks":[],"OnFailure":"/ESPM/Actions/CreateEntityFailur
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {"ParentLink":{"Property":"Items","Target":{"EntitySet":"PurchaseOrderHeaders","ReadLink":"{@odata.readLink}"}},"OnFailure":"/ESPM/Actions/CreateEntityFailureMessage.action","OnSuccess":"/ESPM/Rules/PurchaseOrders/PurchaseOrders_UpdateHeaderAmounts.js","Properties":{"CurrencyCode":"#Control:currencyPrp/#Value","GrossAmount":"#Control:grossAmtPrp/#Value","ItemNumber":"#Control:itemNbrPrp/#Value","NetAmount":"#Control:netAmtPrp/#Value","ProductId":"#Control:productPkr/#SelectedValue","PurchaseOrderId":"#Control:poIdPrp/#Value","Quantity":"#Control:quantityPkr/#SelectedValue","TaxAmount":"#Control:taxPrp/#Value"},"Target":{"EntitySet":"PurchaseOrderItems","Service":"/ESPM/Services/ESPM.service"},"ActionResult":{"_Name":"create"},"_Type":"Action.Type.ODataService.CreateRelatedEntity"}
+module.exports = {"ParentLink":{"Property":"Items","Target":{"EntitySet":"PurchaseOrderHeaders","ReadLink":"{@odata.readLink}"}},"OnFailure":"/ESPM/Actions/CreateEntityFailureMessage.action","OnSuccess":"/ESPM/Rules/PurchaseOrders/PurchaseOrders_UpdateHeaderAmounts.js","Properties":{"CurrencyCode":"#Control:currencyPrp/#Value","GrossAmount":"#Control:grossAmtPrp/#Value","ItemNumber":"#Control:itemNbrPrp/#Value","NetAmount":"#Control:netAmtPrp/#Value","ProductId":"#Control:productPkr/#SelectedValue","PurchaseOrderId":"#Control:poIdPrp/#Value","Quantity":"#Control:quantityPkr/#SelectedValue","TaxAmount":"#Control:taxPrp/#Value"},"Target":{"EntitySet":"PurchaseOrderItems","Service":"/ESPM/Services/ESPM.service"},"Headers":{"Accept":"application/json;IEEE754Compatible=true;ExponentialDecimals=false"},"ActionResult":{"_Name":"create"},"_Type":"Action.Type.ODataService.CreateRelatedEntity"}
 
 /***/ }),
 
@@ -439,7 +439,7 @@ module.exports = {"ParentLink":{"Property":"Items","Target":{"EntitySet":"Purcha
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {"_Type":"Action.Type.ODataService.UpdateEntity","Target":{"EntitySet":"PurchaseOrderHeaders","ReadLink":"PurchaseOrderHeaders('{purchaseOrderId}')","Service":"/ESPM/Services/ESPM.service"},"Properties":{"GrossAmount":"{grossAmt}","NetAmount":"{netAmt}","TaxAmount":"{taxAmt}"},"ActionResult":{"_Name":"update"},"ShowActivityIndicator":true,"OnFailure":"/ESPM/Actions/UpdateEntityFailureMessage.action","OnSuccess":"/ESPM/Actions/UpdateEntitySuccessMessage.action"}
+module.exports = {"_Type":"Action.Type.ODataService.UpdateEntity","Target":{"EntitySet":"PurchaseOrderHeaders","ReadLink":"PurchaseOrderHeaders('{purchaseOrderId}')","Service":"/ESPM/Services/ESPM.service"},"Properties":{"GrossAmount":"{grossAmt}","NetAmount":"{netAmt}","TaxAmount":"{taxAmt}"},"Headers":{"Accept":"application/json;IEEE754Compatible=true;ExponentialDecimals=false"},"ActionResult":{"_Name":"update"},"ShowActivityIndicator":true,"OnFailure":"/ESPM/Actions/UpdateEntityFailureMessage.action","OnSuccess":"/ESPM/Actions/UpdateEntitySuccessMessage.action"}
 
 /***/ }),
 
@@ -505,7 +505,7 @@ module.exports = {"CreateLinks":[],"OnFailure":"/ESPM/Actions/CreateEntityFailur
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {"ParentLink":{"Property":"Items","Target":{"EntitySet":"SalesOrderHeaders","ReadLink":"{@odata.readLink}"}},"OnFailure":"/ESPM/Actions/CreateEntityFailureMessage.action","OnSuccess":"/ESPM/Rules/SalesOrders/SalesOrders_UpdateHeaderAmounts.js","Properties":{"CurrencyCode":"#Control:currencyPrp/#Value","GrossAmount":"#Control:grossAmtPrp/#Value","ItemNumber":"#Control:itemNbrPrp/#Value","NetAmount":"#Control:netAmtPrp/#Value","ProductId":"#Control:productPkr/#SelectedValue","SalesOrderId":"#Control:SOIdPrp/#Value","Quantity":"#Control:quantityPkr/#SelectedValue","TaxAmount":"#Control:taxPrp/#Value"},"Target":{"EntitySet":"SalesOrderItems","Service":"/ESPM/Services/ESPM.service"},"ActionResult":{"_Name":"create"},"ShowActivityIndicator":true,"_Type":"Action.Type.ODataService.CreateRelatedEntity"}
+module.exports = {"ParentLink":{"Property":"Items","Target":{"EntitySet":"SalesOrderHeaders","ReadLink":"{@odata.readLink}"}},"OnFailure":"/ESPM/Actions/CreateEntityFailureMessage.action","OnSuccess":"/ESPM/Rules/SalesOrders/SalesOrders_UpdateHeaderAmounts.js","Properties":{"CurrencyCode":"#Control:currencyPrp/#Value","GrossAmount":"#Control:grossAmtPrp/#Value","ItemNumber":"#Control:itemNbrPrp/#Value","NetAmount":"#Control:netAmtPrp/#Value","ProductId":"#Control:productPkr/#SelectedValue","SalesOrderId":"#Control:SOIdPrp/#Value","Quantity":"#Control:quantityPkr/#SelectedValue","TaxAmount":"#Control:taxPrp/#Value"},"Target":{"EntitySet":"SalesOrderItems","Service":"/ESPM/Services/ESPM.service"},"Headers":{"Accept":"application/json;IEEE754Compatible=true;ExponentialDecimals=false"},"ActionResult":{"_Name":"create"},"ShowActivityIndicator":true,"_Type":"Action.Type.ODataService.CreateRelatedEntity"}
 
 /***/ }),
 
@@ -516,7 +516,7 @@ module.exports = {"ParentLink":{"Property":"Items","Target":{"EntitySet":"SalesO
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {"_Type":"Action.Type.ODataService.UpdateEntity","Target":{"EntitySet":"SalesOrderHeaders","ReadLink":"SalesOrderHeaders('{salesOrderId}')","Service":"/ESPM/Services/ESPM.service"},"Properties":{"GrossAmount":"{grossAmt}","NetAmount":"{netAmt}","TaxAmount":"{taxAmt}"},"ActionResult":{"_Name":"update"},"ShowActivityIndicator":true,"OnFailure":"/ESPM/Actions/UpdateEntityFailureMessage.action","OnSuccess":"/ESPM/Actions/UpdateEntitySuccessMessage.action"}
+module.exports = {"_Type":"Action.Type.ODataService.UpdateEntity","Target":{"EntitySet":"SalesOrderHeaders","ReadLink":"SalesOrderHeaders('{salesOrderId}')","Service":"/ESPM/Services/ESPM.service"},"Properties":{"GrossAmount":"{grossAmt}","NetAmount":"{netAmt}","TaxAmount":"{taxAmt}"},"Headers":{"Accept":"application/json;IEEE754Compatible=true;ExponentialDecimals=false"},"ActionResult":{"_Name":"update"},"ShowActivityIndicator":true,"OnFailure":"/ESPM/Actions/UpdateEntityFailureMessage.action","OnSuccess":"/ESPM/Actions/UpdateEntitySuccessMessage.action"}
 
 /***/ }),
 
@@ -637,7 +637,7 @@ module.exports = {"Controls":[{"Target":"","_Type":"Control.Type.SectionedTable"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {"Controls":[{"Target":"","_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"ObjectHeader":{"Subhead":"Enterprise Sales Procurement Model (ESPM) Application","Description":"Sample Application utliizing sample data models, services to illustrates the various building blocks of creating a multi-channel application","StatusText":"v1.0.0","DetailImage":"/ESPM/Images/mdk_logo.png","DetailImageIsCircular":false,"HeadlineText":"SAP BTP Multi-channel Application","Tags":["/ESPM/Rules/Overview/daysLeftInQuarter.js","/ESPM/Rules/Overview/getCurrentQuarter.js"],"Target":""},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"Footer":{"Caption":"$(L,'see_all_customers')","AttributeLabel":"/ESPM/Rules/Customers/Customers_Count.js","AccessoryType":"disclosureIndicator","FooterStyle":"title","OnPress":"/ESPM/Actions/Customers/NavToCustomers_List.action","UseBottomPadding":true},"Header":{"UseTopPadding":false,"Caption":"$(L,'my_customers')"},"_Type":"Section.Type.ObjectCollection","Target":{"EntitySet":"Customers","Service":"/ESPM/Services/ESPM.service"},"_Name":"SectionObjectCollection0","EmptySection":{"Caption":"$(L,'no_customer')","FooterVisible":true},"ObjectCell":{"Title":"{LastName}","Subhead":"{FirstName}","DetailImage":"/ESPM/Rules/Customers/Customers_Image.js","DetailImageIsCircular":true,"AccessoryType":"none","OnPress":"/ESPM/Actions/Customers/NavToCustomers_Detail.action"},"MaxItemCount":4,"Layout":{"NumberOfColumns":2}},{"Footer":{"Caption":"$(L,'see_all_suppliers')","AttributeLabel":"/ESPM/Rules/Suppliers/Suppliers_Count.js","AccessoryType":"disclosureIndicator","FooterStyle":"title","OnPress":"/ESPM/Actions/Suppliers/NavToSuppliers_List.action","UseBottomPadding":true},"Header":{"UseTopPadding":false,"Caption":"$(L,'my_suppliers')"},"_Type":"Section.Type.ObjectCollection","Target":{"EntitySet":"Suppliers","Service":"/ESPM/Services/ESPM.service"},"_Name":"SectionObjectCollection1","EmptySection":{"Caption":"$(L,'no_supplier') ","FooterVisible":true},"ObjectCell":{"Title":"{SupplierName}","Subhead":"{SupplierId}","DetailImage":"/ESPM/Rules/Suppliers/Suppliers_Image.js","DetailImageIsCircular":true,"AccessoryType":"none","OnPress":"/ESPM/Actions/Suppliers/NavToSuppliers_Detail.action"},"MaxItemCount":4,"Layout":{"NumberOfColumns":2}},{"_Type":"Section.Type.ImageCollection","Target":{"Service":"/ESPM/Services/ESPM.service","EntitySet":"Products","QueryOptions":"$top=15"},"_Name":"SectionImageCollection0","Header":{"UseTopPadding":false,"Caption":"$(L,'product_catalog')"},"Footer":{"Caption":"$(L,'see_all_products')","AttributeLabel":"/ESPM/Rules/Products/Products_Count.js","AccessoryType":"disclosureIndicator","FooterStyle":"title","OnPress":"/ESPM/Actions/Products/NavToProducts_List.action","UseBottomPadding":true},"Visible":true,"EmptySection":{"FooterVisible":false},"ImageCell":{"Title":"{Name}","Subtitle":"{Category}","Image":"/ESPM/Rules/Products/Products_Image.js","ImageIsCircular":false,"OnPress":"/ESPM/Actions/Products/NavToProducts_Detail.action"},"Layout":{"LayoutType":"HorizontalScroll"}},{"Target":"","_Type":"Section.Type.SimplePropertyCollection","DataSubscriptions":["PurchaseOrderHeaders","SalesOrderHeaders"],"_Name":"OverviewSimplePropertyCollection","Header":{"UseTopPadding":false,"Caption":"$(L,'orders')"},"EmptySection":{"FooterVisible":false},"SimplePropertyCells":[{"SimplePropertyCell":{"Target":"","Value":"/ESPM/Rules/PurchaseOrders/PurchaseOrders_Count.js","KeyName":"Purchase Orders","AccessoryType":"disclosureIndicator","OnPress":"/ESPM/Actions/PurchaseOrders/NavToPurchaseOrders_List.action"}},{"SimplePropertyCell":{"Target":"","Value":"/ESPM/Rules/SalesOrders/SalesOrders_Count.js","KeyName":"Sales Orders","AccessoryType":"disclosureIndicator","OnPress":"/ESPM/Actions/SalesOrders/NavToSalesOrders_List.action"}}],"Layout":{"NumberOfColumns":2,"MinimumInteritemSpacing":66}}]}],"Target":"","_Type":"Page","_Name":"Overview","Caption":"$(L,'title')"}
+module.exports = {"Controls":[{"Target":"","_Type":"Control.Type.SectionedTable","_Name":"SectionedTable","Sections":[{"ObjectHeader":{"Subhead":"Enterprise Sales Procurement Model (ESPM) Application","Description":"Sample Application utliizing sample data models, services to illustrates the various building blocks of creating a multi-channel application","StatusText":"v1.0.0","DetailImage":"/ESPM/Images/mdk_logo.png","DetailImageIsCircular":false,"HeadlineText":"SAP BTP Multi-channel Application","Tags":["/ESPM/Rules/Overview/Overview_DaysLeftInQuarter.js","/ESPM/Rules/Overview/Overview_GetCurrentQuarter.js"],"Target":""},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"Footer":{"Caption":"$(L,'see_all_customers')","AttributeLabel":"/ESPM/Rules/Customers/Customers_Count.js","AccessoryType":"disclosureIndicator","FooterStyle":"attribute","OnPress":"/ESPM/Actions/Customers/NavToCustomers_List.action","UseBottomPadding":true},"Header":{"UseTopPadding":false,"Caption":"$(L,'my_customers')"},"_Type":"Section.Type.ObjectCollection","Target":{"EntitySet":"Customers","Service":"/ESPM/Services/ESPM.service"},"_Name":"SectionObjectCollection0","EmptySection":{"Caption":"$(L,'no_customer')","FooterVisible":true},"ObjectCell":{"Title":"{LastName}","Subhead":"{FirstName}","DetailImage":"/ESPM/Rules/Customers/Customers_Image.js","DetailImageIsCircular":true,"AccessoryType":"none","OnPress":"/ESPM/Actions/Customers/NavToCustomers_Detail.action"},"MaxItemCount":4,"Layout":{"NumberOfColumns":2}},{"Footer":{"Caption":"$(L,'see_all_suppliers')","AttributeLabel":"/ESPM/Rules/Suppliers/Suppliers_Count.js","AccessoryType":"disclosureIndicator","FooterStyle":"attribute","OnPress":"/ESPM/Actions/Suppliers/NavToSuppliers_List.action","UseBottomPadding":true},"Header":{"UseTopPadding":false,"Caption":"$(L,'my_suppliers')"},"_Type":"Section.Type.ObjectCollection","Target":{"EntitySet":"Suppliers","Service":"/ESPM/Services/ESPM.service"},"_Name":"SectionObjectCollection1","EmptySection":{"Caption":"$(L,'no_supplier') ","FooterVisible":true},"ObjectCell":{"Title":"{SupplierName}","Subhead":"{SupplierId}","DetailImage":"/ESPM/Rules/Suppliers/Suppliers_Image.js","DetailImageIsCircular":true,"AccessoryType":"none","OnPress":"/ESPM/Actions/Suppliers/NavToSuppliers_Detail.action"},"MaxItemCount":4,"Layout":{"NumberOfColumns":2}},{"_Type":"Section.Type.ImageCollection","Target":{"Service":"/ESPM/Services/ESPM.service","EntitySet":"Products","QueryOptions":"$top=15"},"_Name":"SectionImageCollection0","Header":{"UseTopPadding":false,"Caption":"$(L,'product_catalog')"},"Footer":{"Caption":"$(L,'see_all_products')","AttributeLabel":"/ESPM/Rules/Products/Products_Count.js","AccessoryType":"disclosureIndicator","FooterStyle":"attribute","OnPress":"/ESPM/Actions/Products/NavToProducts_List.action","UseBottomPadding":true},"Visible":true,"EmptySection":{"FooterVisible":false},"ImageCell":{"Title":"{Name}","Subtitle":"{Category}","Image":"{PictureUrl}","ImageIsCircular":false,"OnPress":"/ESPM/Actions/Products/NavToProducts_Detail.action"},"Layout":{"LayoutType":"HorizontalScroll"}},{"Target":"","_Type":"Section.Type.SimplePropertyCollection","DataSubscriptions":["PurchaseOrderHeaders","SalesOrderHeaders"],"_Name":"OverviewSimplePropertyCollection","Header":{"UseTopPadding":false,"Caption":"$(L,'orders')"},"EmptySection":{"FooterVisible":false},"SimplePropertyCells":[{"SimplePropertyCell":{"Target":"","Value":"/ESPM/Rules/PurchaseOrders/PurchaseOrders_Count.js","KeyName":"Purchase Orders","AccessoryType":"disclosureIndicator","OnPress":"/ESPM/Actions/PurchaseOrders/NavToPurchaseOrders_List.action"}},{"SimplePropertyCell":{"Target":"","Value":"/ESPM/Rules/SalesOrders/SalesOrders_Count.js","KeyName":"Sales Orders","AccessoryType":"disclosureIndicator","OnPress":"/ESPM/Actions/SalesOrders/NavToSalesOrders_List.action"}}],"Layout":{"NumberOfColumns":2,"MinimumInteritemSpacing":66}}]}],"Target":"","_Type":"Page","_Name":"Overview","Caption":"$(L,'title')"}
 
 /***/ }),
 
@@ -648,7 +648,7 @@ module.exports = {"Controls":[{"Target":"","_Type":"Control.Type.SectionedTable"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {"Caption":"$(L,'product_details')","ActionBar":{"Items":[{"OnPress":"/ESPM/Actions/Products/NavToProducts_Edit.action","Position":"right","SystemItem":"Edit"}]},"Controls":[{"Sections":[{"ObjectHeader":{"DetailImage":"/ESPM/Rules/Products/Products_Image.js","HeadlineText":"","Subhead":"{Category}","Tags":[],"BodyText":"{Name}","Footnote":"{DimensionHeight} x {DimensionWidth} x {DimensionDepth} {DimensionUnit}","Description":"{ShortDescription}","StatusText":"{Price}","StatusImage":"","SubstatusImage":"","SubstatusText":"{CurrencyCode}"},"_Type":"Section.Type.ObjectHeader"},{"KeyAndValues":[{"KeyName":"Description","Value":"{ShortDescription}"}],"Layout":{"NumberOfColumns":1},"MaxItemCount":1,"_Type":"Section.Type.KeyValue"},{"Header":{"UseTopPadding":true},"KeyAndValues":[{"KeyName":"Category","Value":"{CategoryName}"},{"KeyName":"Quantity Unit","Value":"{QuantityUnit}"}],"Layout":{"NumberOfColumns":2},"MaxItemCount":1,"_Type":"Section.Type.KeyValue"},{"Header":{"Caption":"Dimensions","UseTopPadding":true},"Layout":{"NumberOfColumns":2},"SimplePropertyCells":[{"SimplePropertyCell":{"AccessoryType":"none","KeyName":"Height","Value":"{DimensionHeight} {DimensionUnit}"}},{"SimplePropertyCell":{"AccessoryType":"none","KeyName":"Width","Value":"{DimensionWidth} {DimensionUnit}"}},{"SimplePropertyCell":{"AccessoryType":"none","KeyName":"Depth","Value":"{DimensionDepth} {DimensionUnit}"}},{"SimplePropertyCell":{"AccessoryType":"none","KeyName":"Weight","Value":"{Weight} {WeightUnit}"}}],"_Type":"Section.Type.SimplePropertyCollection"},{"EmptySection":{"Caption":"$(L,'no_supplier')"},"Header":{"Caption":"Supplier Details","UseTopPadding":false},"ObjectCell":{"AccessoryType":"none","DetailImageIsCircular":true,"DetailImage":"/ESPM/Rules/Suppliers/Suppliers_Image.js","Footnote":"{EmailAddress}","PreserveIconStackSpacing":true,"Subhead":"{Street}, {City}, {Country}","Title":"{SupplierName}"},"Target":{"EntitySet":"Suppliers","Service":"/ESPM/Services/ESPM.service","QueryOptions":"$filter=SupplierId eq '{SupplierId}'"},"_Type":"Section.Type.ObjectTable"}],"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable"}],"_Type":"Page","_Name":"Products_Detail"}
+module.exports = {"Caption":"$(L,'product_details')","ActionBar":{"Items":[{"OnPress":"/ESPM/Actions/Products/NavToProducts_Edit.action","Position":"right","SystemItem":"Edit"}]},"Controls":[{"Sections":[{"ObjectHeader":{"DetailImage":"{PictureUrl}","HeadlineText":"","Subhead":"{Category}","Tags":[],"BodyText":"{Name}","Footnote":"{DimensionHeight} x {DimensionWidth} x {DimensionDepth} {DimensionUnit}","Description":"{ShortDescription}","StatusText":"{Price}","StatusImage":"","SubstatusImage":"","SubstatusText":"{CurrencyCode}"},"_Type":"Section.Type.ObjectHeader"},{"KeyAndValues":[{"KeyName":"Description","Value":"{ShortDescription}"}],"Layout":{"NumberOfColumns":1},"MaxItemCount":1,"_Type":"Section.Type.KeyValue"},{"Header":{"UseTopPadding":true},"KeyAndValues":[{"KeyName":"Category","Value":"{CategoryName}"},{"KeyName":"Quantity Unit","Value":"{QuantityUnit}"}],"Layout":{"NumberOfColumns":2},"MaxItemCount":1,"_Type":"Section.Type.KeyValue"},{"Header":{"Caption":"Dimensions","UseTopPadding":true},"Layout":{"NumberOfColumns":2},"SimplePropertyCells":[{"SimplePropertyCell":{"AccessoryType":"none","KeyName":"Height","Value":"{DimensionHeight} {DimensionUnit}"}},{"SimplePropertyCell":{"AccessoryType":"none","KeyName":"Width","Value":"{DimensionWidth} {DimensionUnit}"}},{"SimplePropertyCell":{"AccessoryType":"none","KeyName":"Depth","Value":"{DimensionDepth} {DimensionUnit}"}},{"SimplePropertyCell":{"AccessoryType":"none","KeyName":"Weight","Value":"{Weight} {WeightUnit}"}}],"_Type":"Section.Type.SimplePropertyCollection"},{"EmptySection":{"Caption":"$(L,'no_supplier')"},"Header":{"Caption":"Supplier Details","UseTopPadding":false},"ObjectCell":{"AccessoryType":"none","DetailImageIsCircular":true,"DetailImage":"/ESPM/Rules/Suppliers/Suppliers_Image.js","Footnote":"{EmailAddress}","PreserveIconStackSpacing":true,"Subhead":"{Street}, {City}, {Country}","Title":"{SupplierName}"},"Target":{"EntitySet":"Suppliers","Service":"/ESPM/Services/ESPM.service","QueryOptions":"$filter=SupplierId eq '{SupplierId}'"},"_Type":"Section.Type.ObjectTable"}],"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable"}],"_Type":"Page","_Name":"Products_Detail"}
 
 /***/ }),
 
@@ -670,7 +670,7 @@ module.exports = {"Caption":"$(L,'update_product')","ActionBar":{"Items":[{"Posi
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {"Caption":"$(L,'products')","Controls":[{"Sections":[{"Header":{"UseTopPadding":false},"ObjectCell":{"AccessoryType":"disclosureIndicator","Description":"{ShortDescription}","DetailImage":"/ESPM/Rules/Products/Products_Image.js","DetailImageIsCircular":false,"Icons":[],"OnPress":"/ESPM/Actions/Products/NavToProducts_Detail.action","StatusImage":"","Title":"{Name}","Footnote":"{CategoryName}","PreserveIconStackSpacing":false,"StatusText":"","Subhead":"{ProductId}","SubstatusText":""},"Search":{"Enabled":true,"Placeholder":"$(L,'search')","BarcodeScanner":true,"Delay":500,"MinimumCharacterThreshold":3},"Target":{"EntitySet":"Products","Service":"/ESPM/Services/ESPM.service","QueryOptions":""},"_Type":"Section.Type.ObjectTable"}],"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable"}],"_Type":"Page","_Name":"Products_List"}
+module.exports = {"Caption":"$(L,'products')","Controls":[{"Sections":[{"Header":{"UseTopPadding":false},"ObjectCell":{"AccessoryType":"disclosureIndicator","Description":"{ShortDescription}","DetailImage":"{PictureUrl}","DetailImageIsCircular":false,"Icons":[],"OnPress":"/ESPM/Actions/Products/NavToProducts_Detail.action","StatusImage":"","Title":"{Name}","Footnote":"{CategoryName}","PreserveIconStackSpacing":false,"StatusText":"","Subhead":"{ProductId}","SubstatusText":""},"Search":{"Enabled":true,"Placeholder":"$(L,'search')","BarcodeScanner":true,"Delay":500,"MinimumCharacterThreshold":3},"Target":{"EntitySet":"Products","Service":"/ESPM/Services/ESPM.service","QueryOptions":""},"_Type":"Section.Type.ObjectTable"}],"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable"}],"_Type":"Page","_Name":"Products_List"}
 
 /***/ }),
 
@@ -954,23 +954,23 @@ function OnWillUpdate(clientAPI) {
 
 /***/ }),
 
-/***/ "./build.definitions/ESPM/Rules/Overview/daysLeftInQuarter.js":
-/*!********************************************************************!*\
-  !*** ./build.definitions/ESPM/Rules/Overview/daysLeftInQuarter.js ***!
-  \********************************************************************/
+/***/ "./build.definitions/ESPM/Rules/Overview/Overview_DaysLeftInQuarter.js":
+/*!*****************************************************************************!*\
+  !*** ./build.definitions/ESPM/Rules/Overview/Overview_DaysLeftInQuarter.js ***!
+  \*****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return daysLeftInQuarter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Overview_DaysLeftInQuarter; });
 
 var clientAPI;
 
 /**
  * Describe this function...
  */
-function daysLeftInQuarter(clientAPI) {
+function Overview_DaysLeftInQuarter(clientAPI) {
   var d = new Date();
   var qEnd = new Date(d);
   qEnd.setMonth(qEnd.getMonth() + 3 - qEnd.getMonth() % 3, 0);
@@ -982,23 +982,23 @@ function daysLeftInQuarter(clientAPI) {
 
 /***/ }),
 
-/***/ "./build.definitions/ESPM/Rules/Overview/getCurrentQuarter.js":
-/*!********************************************************************!*\
-  !*** ./build.definitions/ESPM/Rules/Overview/getCurrentQuarter.js ***!
-  \********************************************************************/
+/***/ "./build.definitions/ESPM/Rules/Overview/Overview_GetCurrentQuarter.js":
+/*!*****************************************************************************!*\
+  !*** ./build.definitions/ESPM/Rules/Overview/Overview_GetCurrentQuarter.js ***!
+  \*****************************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return getCurrentQuarter; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Overview_GetCurrentQuarter; });
 
 var clientAPI;
 
 /**
  * Describe this function...
  */
-function getCurrentQuarter(clientAPI) {
+function Overview_GetCurrentQuarter(clientAPI) {
   var d = new Date();
   var q = [1,2,3,4];
   var qNum = q[Math.floor(d.getMonth() / 3)];
@@ -1027,35 +1027,6 @@ function PurchaseOrders_Count(clientAPI) {
 	let serviceName = "/ESPM/Services/ESPM.service";
 	let entitySet = "Products";
 	return _Library_CommonLibrary__WEBPACK_IMPORTED_MODULE_0__["default"].getEntitySetCount(clientAPI, serviceName, entitySet, ' ');                         
-}
-
-
-/***/ }),
-
-/***/ "./build.definitions/ESPM/Rules/Products/Products_Image.js":
-/*!*****************************************************************!*\
-  !*** ./build.definitions/ESPM/Rules/Products/Products_Image.js ***!
-  \*****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Products_Image; });
-
-function text_remove(sourceString, oldString, caseSensitive, startPosition) {
-  startPosition = startPosition ? startPosition : 0;
-  var keepPart = sourceString.substring(0,startPosition);
-  var changePart = sourceString.substring(startPosition);
-  var ignoreCase = caseSensitive ? "" : "i";
-  var oldExpression = new RegExp(oldString, "g"+ignoreCase);
-  changePart = changePart.replace(oldExpression,"");
-  return keepPart.concat(changePart);
-}
-function Products_Image(clientAPI) {
-  let imagePath = '/ESPM/Images/';
-  imagePath = String(imagePath) + String(text_remove((clientAPI.evaluateTargetPath('#Property:PictureUrl')), '/ESPM/resources/images/', false, 0));
-  return imagePath;
 }
 
 
@@ -1456,7 +1427,7 @@ function SupplierImage(clientAPI) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = {"DestinationName":"../service/ESPM","OfflineEnabled":false,"LanguageURLParam":"sap-language","OnlineOptions":{"ServiceOptions":{"ieee754Compatible":true}},"Headers":{"content-type":"application/json;IEEE754Compatible=true"},"PathSuffix":"","SourceType":"Cloud","ServiceUrl":""}
+module.exports = {"DestinationName":"../service/ESPM","OfflineEnabled":false,"LanguageURLParam":"sap-language","OnlineOptions":{"ServiceOptions":{"ieee754Compatible":true}},"PathSuffix":"","SourceType":"Cloud","ServiceUrl":""}
 
 /***/ }),
 
@@ -1614,10 +1585,9 @@ let espm_rules_customers_customers_count_js = __webpack_require__(/*! ./ESPM/Rul
 let espm_rules_customers_customers_image_js = __webpack_require__(/*! ./ESPM/Rules/Customers/Customers_Image.js */ "./build.definitions/ESPM/Rules/Customers/Customers_Image.js")
 let espm_rules_library_commonlibrary_js = __webpack_require__(/*! ./ESPM/Rules/Library/CommonLibrary.js */ "./build.definitions/ESPM/Rules/Library/CommonLibrary.js")
 let espm_rules_onwillupdate_js = __webpack_require__(/*! ./ESPM/Rules/OnWillUpdate.js */ "./build.definitions/ESPM/Rules/OnWillUpdate.js")
-let espm_rules_overview_daysleftinquarter_js = __webpack_require__(/*! ./ESPM/Rules/Overview/daysLeftInQuarter.js */ "./build.definitions/ESPM/Rules/Overview/daysLeftInQuarter.js")
-let espm_rules_overview_getcurrentquarter_js = __webpack_require__(/*! ./ESPM/Rules/Overview/getCurrentQuarter.js */ "./build.definitions/ESPM/Rules/Overview/getCurrentQuarter.js")
+let espm_rules_overview_overview_daysleftinquarter_js = __webpack_require__(/*! ./ESPM/Rules/Overview/Overview_DaysLeftInQuarter.js */ "./build.definitions/ESPM/Rules/Overview/Overview_DaysLeftInQuarter.js")
+let espm_rules_overview_overview_getcurrentquarter_js = __webpack_require__(/*! ./ESPM/Rules/Overview/Overview_GetCurrentQuarter.js */ "./build.definitions/ESPM/Rules/Overview/Overview_GetCurrentQuarter.js")
 let espm_rules_products_products_count_js = __webpack_require__(/*! ./ESPM/Rules/Products/Products_Count.js */ "./build.definitions/ESPM/Rules/Products/Products_Count.js")
-let espm_rules_products_products_image_js = __webpack_require__(/*! ./ESPM/Rules/Products/Products_Image.js */ "./build.definitions/ESPM/Rules/Products/Products_Image.js")
 let espm_rules_purchaseorders_purchaseorders_count_js = __webpack_require__(/*! ./ESPM/Rules/PurchaseOrders/PurchaseOrders_Count.js */ "./build.definitions/ESPM/Rules/PurchaseOrders/PurchaseOrders_Count.js")
 let espm_rules_purchaseorders_purchaseorders_dataonvaluechange_js = __webpack_require__(/*! ./ESPM/Rules/PurchaseOrders/PurchaseOrders_DataOnValueChange.js */ "./build.definitions/ESPM/Rules/PurchaseOrders/PurchaseOrders_DataOnValueChange.js")
 let espm_rules_purchaseorders_purchaseorders_generatenextpoid_js = __webpack_require__(/*! ./ESPM/Rules/PurchaseOrders/PurchaseOrders_GenerateNextPOId.js */ "./build.definitions/ESPM/Rules/PurchaseOrders/PurchaseOrders_GenerateNextPOId.js")
@@ -1699,10 +1669,9 @@ module.exports = {
 	espm_rules_customers_customers_image_js : espm_rules_customers_customers_image_js,
 	espm_rules_library_commonlibrary_js : espm_rules_library_commonlibrary_js,
 	espm_rules_onwillupdate_js : espm_rules_onwillupdate_js,
-	espm_rules_overview_daysleftinquarter_js : espm_rules_overview_daysleftinquarter_js,
-	espm_rules_overview_getcurrentquarter_js : espm_rules_overview_getcurrentquarter_js,
+	espm_rules_overview_overview_daysleftinquarter_js : espm_rules_overview_overview_daysleftinquarter_js,
+	espm_rules_overview_overview_getcurrentquarter_js : espm_rules_overview_overview_getcurrentquarter_js,
 	espm_rules_products_products_count_js : espm_rules_products_products_count_js,
-	espm_rules_products_products_image_js : espm_rules_products_products_image_js,
 	espm_rules_purchaseorders_purchaseorders_count_js : espm_rules_purchaseorders_purchaseorders_count_js,
 	espm_rules_purchaseorders_purchaseorders_dataonvaluechange_js : espm_rules_purchaseorders_purchaseorders_dataonvaluechange_js,
 	espm_rules_purchaseorders_purchaseorders_generatenextpoid_js : espm_rules_purchaseorders_purchaseorders_generatenextpoid_js,
