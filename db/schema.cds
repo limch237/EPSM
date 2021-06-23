@@ -10,8 +10,8 @@ entity PurchaseOrderItems {
   Quantity : Decimal(13, 3);
   QuantityUnit : String(3);
   TaxAmount : Decimal(15, 3);
-  ProductDetails : Association to Products on ProductDetails.ProductId = ProductId;
-  Header : Association to PurchaseOrderHeaders on Header.PurchaseOrderId = PurchaseOrderId;
+  ProductDetails : Association to one Products on ProductDetails.ProductId = ProductId;
+  Header : Association to one PurchaseOrderHeaders on Header.PurchaseOrderId = PurchaseOrderId;
 }
 
 entity SalesOrderItems {
@@ -25,8 +25,8 @@ entity SalesOrderItems {
   Quantity : Decimal(15, 3);
   QuantityUnit : String(3);
   TaxAmount : Decimal(15, 3);
-  ProductDetails : Association to Products  on ProductDetails.ProductId = ProductId;
-  Header : Association to SalesOrderHeaders on Header.SalesOrderId = SalesOrderId;
+  ProductDetails : Association to one Products on ProductDetails.ProductId = ProductId;
+  Header : Association to one SalesOrderHeaders on Header.SalesOrderId = SalesOrderId;
 }
 
 entity Products {
@@ -49,8 +49,8 @@ entity Products {
   Weight : Decimal(13, 3);
   WeightUnit : String(3);
   Image : LargeBinary @Core.MediaType : 'image/jpg';
-  StockDetails : Association to Stock on StockDetails.ProductId = ProductId;
-  SupplierDetails : Association to Suppliers on SupplierDetails.SupplierId = SupplierId;
+  StockDetails : Association to one Stock on StockDetails.ProductId = ProductId;
+  SupplierDetails : Association to one Suppliers on SupplierDetails.SupplierId = SupplierId;
 }
 
 entity PurchaseOrderHeaders {
@@ -60,7 +60,7 @@ entity PurchaseOrderHeaders {
   key PurchaseOrderId : String(10);
   SupplierId : String(10);
   TaxAmount : Decimal(15, 3);
-  Items : Association to many PurchaseOrderItems on Items.PurchaseOrderId = PurchaseOrderId;
+  Items : Association to many PurchaseOrderItems on Items.Header = $self;
 }
 
 entity ProductCategories {
@@ -82,8 +82,8 @@ entity SalesOrderHeaders {
   NetAmount : Decimal(15, 3);
   key SalesOrderId : String(10);
   TaxAmount : Decimal(15, 3);
-  CustomerDetails : Association to Customers on CustomerDetails.CustomerId = CustomerId;
-  Items : Association to many SalesOrderItems on Items.SalesOrderId = SalesOrderId;
+  CustomerDetails : Association to one Customers on CustomerDetails.CustomerId = CustomerId;
+  Items : Association to many SalesOrderItems on Items.Header = $self;
 }
 
 entity ProductTexts {
@@ -108,6 +108,7 @@ entity Customers {
   PostalCode : String(10);
   Street : String(60);
   UpdatedTimestamp : DateTime;
+  SalesOrders : Association to many SalesOrderHeaders on SalesOrders.CustomerDetails = $self;
 }
 
 entity Stock {
@@ -117,7 +118,7 @@ entity Stock {
   Quantity : Decimal(13, 3);
   QuantityLessMin : Boolean;
   UpdatedTimestamp : DateTime;
-  ProductDetails : Association to Products on ProductDetails.ProductId = ProductId;
+  ProductDetails : Association to one Products on ProductDetails.StockDetails = $self;
 }
 
 entity Suppliers {
@@ -131,5 +132,5 @@ entity Suppliers {
   key SupplierId : String(10);
   SupplierName : String(80);
   UpdatedTimestamp : DateTime;
-  Products : Association to many Products on Products.SupplierId = SupplierId;
+  Products : Association to many Products on Products.SupplierDetails = $self;
 }
