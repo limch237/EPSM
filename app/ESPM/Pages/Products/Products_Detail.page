@@ -10,7 +10,7 @@
 	"Controls": [{
 		"Sections": [{
 			"ObjectHeader": {
-				"DetailImage": "/ESPM/Rules/Products/Products_Image.js",
+				"DetailImage": "{PictureUrl}",
 				"HeadlineText": "",
 				"Subhead": "{Category}",
 				"Tags": [],

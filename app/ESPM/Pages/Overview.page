@@ -122,7 +122,7 @@
 					"ImageCell": {
 						"Title": "{Name}",
 						"Subtitle": "{Category}",
-						"Image": "/ESPM/Rules/Products/Products_Image.js",
+						"Image": "{PictureUrl}",
 						"ImageIsCircular": false,
 						"OnPress": "/ESPM/Actions/Products/NavToProducts_Detail.action"
 					},

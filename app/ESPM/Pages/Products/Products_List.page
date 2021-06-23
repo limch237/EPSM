@@ -8,7 +8,7 @@
 			"ObjectCell": {
 				"AccessoryType": "disclosureIndicator",
 				"Description": "{ShortDescription}",
-				"DetailImage": "/ESPM/Rules/Products/Products_Image.js",
+				"DetailImage": "{PictureUrl}",
 				"DetailImageIsCircular": false,
 				"Icons": [],
 				"OnPress": "/ESPM/Actions/Products/NavToProducts_Detail.action",
