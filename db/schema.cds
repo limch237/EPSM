@@ -48,7 +48,7 @@ entity Products {
   UpdatedTimestamp : DateTime;
   Weight : Decimal(13, 3);
   WeightUnit : String(3);
-  Image : LargeBinary @Core.MediaType : 'image/jpg';
+  Picture : LargeBinary @Core.MediaType : 'image/jpeg';
   StockDetails : Association to one Stock on StockDetails.ProductId = ProductId;
   SupplierDetails : Association to one Suppliers on SupplierDetails.SupplierId = SupplierId;
 }
