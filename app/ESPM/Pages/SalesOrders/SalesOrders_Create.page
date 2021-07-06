@@ -1,60 +1,86 @@
 {
-	"ActionBar": {
-		"Items": [{
-			"OnPress": "/ESPM/Actions/CloseModalPage_Cancel.action",
-			"Position": "left",
-			"SystemItem": "Cancel"
-		}, {
-			"OnPress": "/ESPM/Actions/SalesOrders/SalesOrders_CreateEntity.action",
-			"Position": "right",
-			"SystemItem": "Save"
-		}]
-	},
-	"Caption": "$(L,'create_sales_order')",
-	"Controls": [{
-		"Sections": [{
-			"Controls": [
+	"Controls": [
+		{
+			"Target": "",
+			"_Type": "Control.Type.FormCellContainer",
+			"_Name": "FormCellContainer",
+			"Sections": [
 				{
-					"Caption": "SalesOrder Id",
-					"IsEditable": false,
-					"PlaceHolder": "value",
-					"Value": "/ESPM/Rules/SalesOrders/SalesOrders_GenerateNextSOId.js",
-					"_Name": "SOIdPrp",
-					"_Type": "Control.Type.FormCell.SimpleProperty"
-				},
-				{
-					"AllowEmptySelection": true,
-					"AllowMultipleSelection": false,
-					"Caption": "Customer",
-					"PickerItems": {
-						"DisplayValue": "{FirstName}, {LastName}",
-						"ReturnValue": "{CustomerId}",
-						"Target": {
-							"EntitySet": "Customers",
-							"Service": "/ESPM/Services/ESPM.service",
-							"UniqueIdType": "Integer"
+					"Controls": [
+						{
+							"Target": "",
+							"Value": "/ESPM/Rules/SalesOrders/SalesOrders_GenerateNextSOId.js",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "SOIdPrp",
+							"IsEditable": false,
+							"Styles": {
+								"Value": "read-only"
+							},
+							"Caption": "SalesOrder Id",
+							"PlaceHolder": "value"
+						},
+						{
+							"Target": "",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "customerPkr",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Customer",
+							"PickerPrompt": "Choose Customer from",
+							"IsPickerDismissedOnSelection": true,
+							"PickerItems": {
+								"DisplayValue": "{FirstName}, {LastName}",
+								"ReturnValue": "{CustomerId}",
+								"Target": {
+									"EntitySet": "Customers",
+									"Service": "/ESPM/Services/ESPM.service",
+									"UniqueIdType": "Integer"
+								}
+							}
+						},
+						{
+							"Target": "",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "currencyPkr",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Currency",
+							"PickerPrompt": "Select Currency ",
+							"IsPickerDismissedOnSelection": true,
+							"PickerItems": "/ESPM/Rules/Common/CurrencyPickerItems.js"
 						}
-					},
-					"PickerPrompt": "Choose Supplier from",
-					"Value": "100000037",
-					"_Name": "customerPkr",
-					"_Type": "Control.Type.FormCell.ListPicker"
-				},
-				{
-					"AllowEmptySelection": true,
-					"AllowMultipleSelection": false,
-					"Caption": "Currency",
-					"PickerItems": "/ESPM/Rules/Common/CurrencyPickerItems.js",
-					"PickerPrompt": "Select Currency ",
-					"Value": "EUR",
-					"_Name": "currencyPkr",
-					"_Type": "Control.Type.FormCell.ListPicker"
+					],
+					"Target": "",
+					"Visible": true
 				}
 			]
-		}],
-		"_Name": "FormCellContainer",
-		"_Type": "Control.Type.FormCellContainer"
-	}],
+		}
+	],
+	"Target": "",
 	"_Type": "Page",
-	"_Name": "SalesOrders_Create"
+	"_Name": "SalesOrders_Create",
+	"Caption": "$(L,'create_sales_order')",
+	"ActionBar": {
+		"Items": [
+			{
+				"Target": "",
+				"_Name": "ActionBarItem0",
+				"SystemItem": "Cancel",
+				"Position": "left",
+				"IsIconCircular": false,
+				"OnPress": "/ESPM/Actions/CloseModalPage_Cancel.action",
+				"Text": ""
+			},
+			{
+				"Target": "",
+				"_Name": "ActionBarItem1",
+				"SystemItem": "Save",
+				"Position": "right",
+				"IsIconCircular": false,
+				"OnPress": "/ESPM/Actions/SalesOrders/SalesOrders_CreateEntity.action",
+				"Text": ""
+			}
+		],
+		"_Name": "ActionBar0"
+	}
 }

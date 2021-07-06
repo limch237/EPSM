@@ -1,60 +1,86 @@
 {
-	"ActionBar": {
-		"Items": [{
-			"OnPress": "/ESPM/Actions/CloseModalPage_Cancel.action",
-			"Position": "left",
-			"SystemItem": "Cancel"
-		}, {
-			"OnPress": "/ESPM/Actions/PurchaseOrders/PurchaseOrders_CreateEntity.action",
-			"Position": "right",
-			"SystemItem": "Save"
-		}]
-	},
-	"Caption": "$(L,'create_purchase_order')",
-	"Controls": [{
-		"Sections": [{
-			"Controls": [
+	"Controls": [
+		{
+			"Target": "",
+			"_Type": "Control.Type.FormCellContainer",
+			"_Name": "FormCellContainer",
+			"Sections": [
 				{
-					"Caption": "PurchaseOrder ID",
-					"IsEditable": false,
-					"PlaceHolder": "value",
-					"Value": "/ESPM/Rules/PurchaseOrders/PurchaseOrders_GenerateNextPOId.js",
-					"_Name": "poIdPrp",
-					"_Type": "Control.Type.FormCell.SimpleProperty"
-				},
-				{
-					"AllowEmptySelection": true,
-					"AllowMultipleSelection": false,
-					"Caption": "Supplier",
-					"PickerItems": {
-						"DisplayValue": "{SupplierId} - {SupplierName}",
-						"ReturnValue": "{SupplierId}",
-						"Target": {
-							"EntitySet": "Suppliers",
-							"Service": "/ESPM/Services/ESPM.service",
-							"UniqueIdType": "Integer"
+					"Controls": [
+						{
+							"Target": "",
+							"Value": "/ESPM/Rules/PurchaseOrders/PurchaseOrders_GenerateNextPOId.js",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "poIdPrp",
+							"IsEditable": false,
+							"Styles": {
+								"Value": "read-only"
+							},
+							"Caption": "PurchaseOrder ID",
+							"PlaceHolder": "value"
+						},
+						{
+							"Target": "",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "supplierPkr",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Supplier",
+							"PickerPrompt": "Choose Supplier from",
+							"IsPickerDismissedOnSelection": true,
+							"PickerItems": {
+								"DisplayValue": "{SupplierId} - {SupplierName}",
+								"ReturnValue": "{SupplierId}",
+								"Target": {
+									"EntitySet": "Suppliers",
+									"Service": "/ESPM/Services/ESPM.service",
+									"UniqueIdType": "Integer"
+								}
+							}
+						},
+						{
+							"Target": "",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "currencyPkr",
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Currency",
+							"PickerPrompt": "Select Currency ",
+							"IsPickerDismissedOnSelection": true,
+							"PickerItems": "/ESPM/Rules/Common/CurrencyPickerItems.js"
 						}
-					},
-					"PickerPrompt": "Choose Supplier from",
-					"Value": "100000048",
-					"_Name": "supplierPkr",
-					"_Type": "Control.Type.FormCell.ListPicker"
-				},
-				{
-					"AllowEmptySelection": true,
-					"AllowMultipleSelection": false,
-					"Caption": "Currency",
-					"PickerItems": "/ESPM/Rules/Common/CurrencyPickerItems.js",
-					"PickerPrompt": "Select Currency ",
-					"Value": "EUR",
-					"_Name": "currencyPkr",
-					"_Type": "Control.Type.FormCell.ListPicker"
+					],
+					"Target": "",
+					"Visible": true
 				}
 			]
-		}],
-		"_Name": "FormCellContainer",
-		"_Type": "Control.Type.FormCellContainer"
-	}],
+		}
+	],
+	"Target": "",
 	"_Type": "Page",
-	"_Name": "PurchaseOrders_Create"
+	"_Name": "PurchaseOrders_Create",
+	"Caption": "$(L,'create_purchase_order')",
+	"ActionBar": {
+		"Items": [
+			{
+				"Target": "",
+				"_Name": "ActionBarItem0",
+				"SystemItem": "Cancel",
+				"Position": "left",
+				"IsIconCircular": false,
+				"OnPress": "/ESPM/Actions/CloseModalPage_Cancel.action",
+				"Text": ""
+			},
+			{
+				"Target": "",
+				"_Name": "ActionBarItem1",
+				"SystemItem": "Save",
+				"Position": "right",
+				"IsIconCircular": false,
+				"OnPress": "/ESPM/Actions/PurchaseOrders/PurchaseOrders_CreateEntity.action",
+				"Text": ""
+			}
+		],
+		"_Name": "ActionBar0"
+	}
 }

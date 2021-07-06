@@ -60,6 +60,7 @@ entity PurchaseOrderHeaders {
   key PurchaseOrderId : String(10);
   SupplierId : String(10);
   TaxAmount : Decimal(15, 3);
+  SupplierDetails: Association to one Suppliers on SupplierDetails.SupplierId = SupplierId;
   Items : Association to many PurchaseOrderItems on Items.Header = $self;
 }
 

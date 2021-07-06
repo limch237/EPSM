@@ -5,7 +5,7 @@
     "Organization": "",
     "Space": "",
     "Deploy": {
-      "Description":"My SAP application",
+      "Description":"ESPM application",
       "WebClient":{
         "AutoUrl":true,
         "Version":"",
