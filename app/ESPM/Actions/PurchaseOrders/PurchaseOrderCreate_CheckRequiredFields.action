@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.CheckRequiredFields",
+	"OnFailure": "/ESPM/Rules/PurchaseOrders/PurchaseOrderCreate_RequiredFields.js",
+	"OnSuccess": "/ESPM/Actions/PurchaseOrders/PurchaseOrders_CreateEntity.action",
+	"RequiredFields": [
+		"currencyPkr",
+		"supplierPkr"
+	]
+}

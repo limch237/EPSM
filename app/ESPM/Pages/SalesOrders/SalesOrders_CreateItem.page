@@ -33,6 +33,14 @@
 						},
 						{
 							"Target": "",
+							"validationProperties": {
+								"ValidationMessage": "Select a Product from list",
+								"ValidationMessageColor": "ff0000",
+								"SeparatorBackgroundColor": "000000",
+								"SeparatorIsHidden": false,
+								"ValidationViewBackgroundColor": "fffa00",
+								"ValidationViewIsHidden": true
+							},
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "productPkr",
 							"AllowMultipleSelection": false,
@@ -158,7 +166,7 @@
 				"SystemItem": "Save",
 				"Position": "right",
 				"IsIconCircular": false,
-				"OnPress": "/ESPM/Actions/SalesOrders/SalesOrders_CreateItemEntity.action",
+				"OnPress": "/ESPM/Actions/SalesOrders/SalesOrderItemCreate_CheckRequiredFields.action",
 				"Text": "Item"
 			}
 		],

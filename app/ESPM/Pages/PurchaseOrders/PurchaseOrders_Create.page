@@ -21,12 +21,21 @@
 						},
 						{
 							"Target": "",
+							"validationProperties": {
+								"ValidationMessage": "Supplier cannot be empty",
+								"ValidationMessageColor": "ff0000",
+								"SeparatorBackgroundColor": "000000",
+								"SeparatorIsHidden": false,
+								"ValidationViewBackgroundColor": "fffa00",
+								"ValidationViewIsHidden": true
+							},
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "supplierPkr",
 							"AllowMultipleSelection": false,
 							"AllowEmptySelection": false,
 							"Caption": "Supplier",
 							"PickerPrompt": "Choose Supplier from",
+							"OnValueChange": "/ESPM/Rules/PurchaseOrders/PurchaseOrderCreate_OnValueChange.js",
 							"IsPickerDismissedOnSelection": true,
 							"PickerItems": {
 								"DisplayValue": "{SupplierId} - {SupplierName}",
@@ -40,12 +49,21 @@
 						},
 						{
 							"Target": "",
+							"validationProperties": {
+								"ValidationMessage": "Currency cannot be empty",
+								"ValidationMessageColor": "ff0000",
+								"SeparatorBackgroundColor": "000000",
+								"SeparatorIsHidden": true,
+								"ValidationViewBackgroundColor": "fffa00",
+								"ValidationViewIsHidden": true
+							},
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "currencyPkr",
 							"AllowMultipleSelection": false,
 							"AllowEmptySelection": false,
 							"Caption": "Currency",
 							"PickerPrompt": "Select Currency ",
+							"OnValueChange": "/ESPM/Rules/PurchaseOrders/PurchaseOrderCreate_OnValueChange.js",
 							"IsPickerDismissedOnSelection": true,
 							"PickerItems": "/ESPM/Rules/Common/CurrencyPickerItems.js"
 						}
@@ -77,7 +95,7 @@
 				"SystemItem": "Save",
 				"Position": "right",
 				"IsIconCircular": false,
-				"OnPress": "/ESPM/Actions/PurchaseOrders/PurchaseOrders_CreateEntity.action",
+				"OnPress": "/ESPM/Actions/PurchaseOrders/PurchaseOrderCreate_CheckRequiredFields.action",
 				"Text": ""
 			}
 		],
