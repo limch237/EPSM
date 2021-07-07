@@ -1,18 +1,10 @@
-# Sample app – Enterprise Sales Procurement Model (ESPM) app
+# Enterprise Sales Procurement Model (ESPM) app
 
-## Data models  
+This is a sample project demonstrating the capabilities of the Low Code Application Platform (LCAP).
 
-- Products, Customers, Suppliers, PurchaseOrders, SalesOrders and other supporting entities which are exposed as OData service.
-- The sample data is also provided so that developer/user can play around the app at runtime.
+Features:
 
-## Brief functions 
-
-- Manage Capital Expenditure across line of business units to get required approvals in a transparent way.
-- Demo the project structure, Test Run and Deploy etc.
-- Show case multiple page layouts and rich set of UI controls, e.g., GridTable, ObjectTable, ObjectHeader, ObjectCollection, ImageCollection, ListPicker, KeyValue and Note etc.
-- Consume local or remote OData service by using CAP on CF.
-
-## Customizability  
-
-- Developer can try LCAP Layout Editor, manipulate the page layout, and modify controls
-- Can modify UI logics 
+- The business scenario is for ESPM Admin who has all access to create Sales Orders and Purchases Orders, Update product information, maintain a list of Customers and Suppliers.
+- Demo the project structure, Test Run and Deployment etc.
+- Showcase multiple page layouts and rich set of UI controls, e.g., GridTable, ObjectTable, ObjectHeader, ObjectCollection, ImageCollection, ListPicker, KeyValue and Note etc.
+- Consume local or remote OData service by using CAP on CF.
