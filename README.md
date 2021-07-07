@@ -1,25 +1,18 @@
-# Getting Started
+# Sample app – Enterprise Sales Procurement Model (ESPM) app
 
-Welcome to your new project.
+## Data models  
 
-It contains these folders and files, following our recommended project layout:
+- Products, Customers, Suppliers, PurchaseOrders, SalesOrders and other supporting entities which are exposed as OData service.
+- The sample data is also provided so that developer/user can play around the app at runtime.
 
-File or Folder | Purpose
----------|----------
-`app/` | content for UI frontends goes here
-`db/` | your domain models and data go here
-`srv/` | your service models and code go here
-`package.json` | project metadata and configuration
-`readme.md` | this getting started guide
+## Brief functions 
 
+- Manage Capital Expenditure across line of business units to get required approvals in a transparent way.
+- Demo the project structure, Test Run and Deploy etc.
+- Show case multiple page layouts and rich set of UI controls, e.g., GridTable, ObjectTable, ObjectHeader, ObjectCollection, ImageCollection, ListPicker, KeyValue and Note etc.
+- Consume local or remote OData service by using CAP on CF.
 
-## Next Steps
+## Customizability  
 
-- Open a new terminal and run `cds watch` 
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-- Start adding content, for example, a [db/schema.cds](db/schema.cds).
-
-
-## Learn More
-
-Learn more at https://cap.cloud.sap/docs/get-started/.
+- Developer can try LCAP Layout Editor, manipulate the page layout, and modify controls
+- Can modify UI logics 
