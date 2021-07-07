@@ -9,7 +9,7 @@
       "WebClient":{
         "AutoUrl":true,
         "Version":"",
-        "StaticUrl":""
+         "URL":"https://lcap-int-dev-webclient-approuter.cfapps.sap.hana.ondemand.com/webclient/"
       },
       "Destination": [
         { "CF": "ESPM-app-srv", "MDK": "../service/ESPM/", "URL": ""}
