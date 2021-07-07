@@ -1,8 +1,8 @@
 {
 	"Controls": [
 		{
-			"_Type": "Control.Type.SectionedTable",
 			"Target": "",
+			"_Type": "Control.Type.SectionedTable",
 			"_Name": "SectionedTable",
 			"Sections": [
 				{
@@ -52,7 +52,7 @@
 							{
 								"Target": "",
 								"NumberOfLines": 1,
-								"Text": "{DeliveryDate}"
+								"Text": "$(D,{DeliveryDate},'','',{format:'medium'})"
 							}
 						],
 						"Layout": {
@@ -125,8 +125,8 @@
 			]
 		}
 	],
-	"_Type": "Page",
 	"Target": "",
+	"_Type": "Page",
 	"_Name": "SalesOrders_Detail",
 	"Caption": "$(L,'sales_orders_details')",
 	"ActionBar": {

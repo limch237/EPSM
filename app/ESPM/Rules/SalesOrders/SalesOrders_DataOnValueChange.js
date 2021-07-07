@@ -17,7 +17,8 @@ export default function SalesOrders_DataOnValueChange(clientAPI) {
 		let netAmount = qty * price;
 		let tax = netAmount * 0.07;
 		let grossAmount = netAmount + tax;
-		let formatOptions = {minimumFractionDigits: 2, useGrouping: false};
+        let formatOptions = {minimumFractionDigits: 2, useGrouping: false};
+        clientAPI.evaluateTargetPathForAPI('#Page:SalesOrders_CreateItem/#Control:quantityUnit').setValue(data.QuantityUnit);
 		clientAPI.evaluateTargetPathForAPI('#Page:SalesOrders_CreateItem/#Control:pricePrp').setValue(clientAPI.formatNumber(price,'',formatOptions));
 		clientAPI.evaluateTargetPathForAPI("#Page:SalesOrders_CreateItem/#Control:currencyPrp").setValue(data.CurrencyCode);
 		clientAPI.evaluateTargetPathForAPI("#Page:SalesOrders_CreateItem/#Control:netAmtPrp").setValue(clientAPI.formatNumber(netAmount,'',formatOptions));

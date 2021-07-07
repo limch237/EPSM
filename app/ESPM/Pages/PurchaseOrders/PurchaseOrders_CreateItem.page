@@ -90,6 +90,17 @@
 							]
 						},
 						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"Target": "",
+							"_Name": "quantityUnit",
+							"IsEditable": false,
+							"IsVisible": true,
+							"Styles": {
+								"Value": "read-only"
+							},
+							"Caption": "Quantity Unit"
+						},
+						{
 							"Target": "",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "currencyPrp",

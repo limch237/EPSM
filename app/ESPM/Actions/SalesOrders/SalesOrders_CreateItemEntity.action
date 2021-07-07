@@ -1,33 +1,35 @@
 {
-  "ParentLink": {
-    "Property": "Items",
-    "Target": {
-      "EntitySet": "SalesOrderHeaders",        
-      "ReadLink": "{@odata.readLink}"
-    }
-  },
-  "OnFailure": "/ESPM/Actions/CreateEntityFailureMessage.action",
-	"OnSuccess": "/ESPM/Rules/SalesOrders/SalesOrders_UpdateHeaderAmounts.js",
-	"Properties": {
-		"CurrencyCode": "#Control:currencyPrp/#Value",
-		"GrossAmount": "#Control:grossAmtPrp/#Value",
-		"ItemNumber": "#Control:itemNbrPrp/#Value",
-		"NetAmount": "#Control:netAmtPrp/#Value",
-		"ProductId": "#Control:productPkr/#SelectedValue",
-		"SalesOrderId": "#Control:SOIdPrp/#Value",
-		"Quantity": "#Control:quantityPkr/#SelectedValue",
-		"TaxAmount": "#Control:taxPrp/#Value"
+	"_Type": "Action.Type.ODataService.CreateRelatedEntity",
+	"ActionResult": {
+		"_Name": "create"
 	},
+	"OnFailure": "/ESPM/Actions/CreateEntityFailureMessage.action",
+	"OnSuccess": "/ESPM/Rules/SalesOrders/SalesOrders_UpdateHeaderAmounts.js",
+	"ShowActivityIndicator": true,
 	"Target": {
 		"EntitySet": "SalesOrderItems",
 		"Service": "/ESPM/Services/ESPM.service"
 	},
+	"ParentLink": {
+		"Property": "Items",
+		"Target": {
+			"EntitySet": "SalesOrderHeaders",
+			"ReadLink": "{@odata.readLink}"
+		}
+	},
+	"Properties": {
+		"CurrencyCode": "#Control:currencyPrp/#Value",
+		"DeliveryDate": "/ESPM/Rules/SalesOrders/SalesOrders_GenerateDeliveryDate.js",
+		"GrossAmount": "#Control:grossAmtPrp/#Value",
+		"ItemNumber": "#Control:itemNbrPrp/#Value",
+		"SalesOrderId": "#Control:SOIdPrp/#Value",
+		"NetAmount": "#Control:netAmtPrp/#Value",
+		"ProductId": "#Control:productPkr/#SelectedValue",
+		"Quantity": "#Control:quantityPkr/#SelectedValue",
+		"QuantityUnit": "#Control:quantityUnit/#Value",
+		"TaxAmount": "#Control:taxPrp/#Value"
+	},
 	"Headers": {
 		"Accept": "application/json;IEEE754Compatible=true;ExponentialDecimals=false"
-	},
-	"ActionResult": {
-		"_Name": "create"
-	},
-	"ShowActivityIndicator": true,
-	"_Type": "Action.Type.ODataService.CreateRelatedEntity"
+	}
 }
