@@ -82,8 +82,11 @@
 							"Value": "{CurrencyCode}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "ProductCurrencyCode",
-							"IsEditable": true,
-							"Caption": "Currency"
+							"IsEditable": false,
+							"Caption": "Currency",
+							"Styles": {
+								"Value": "read-only"
+							}
 						}
 					],
 					"Target": "",

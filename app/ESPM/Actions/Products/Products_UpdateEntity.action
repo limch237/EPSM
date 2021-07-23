@@ -21,9 +21,6 @@
 		"SupplierId": "#Control:productSupplierID/#SelectedValue"
 	},
 	"UpdateLinks": [],
-	"Headers": {
-		"Accept": "application/json;IEEE754Compatible=true;ExponentialDecimals=false"
-	},
 	"ActionResult": {
 		"_Name": "update"
 	},

@@ -10,9 +10,6 @@
 		"NetAmount": "{netAmt}",
 		"TaxAmount": "{taxAmt}"
 	},
-	"Headers": {
-		"Accept": "application/json;IEEE754Compatible=true;ExponentialDecimals=false"
-	},
 	"ActionResult": {
 		"_Name": "update"
 	},

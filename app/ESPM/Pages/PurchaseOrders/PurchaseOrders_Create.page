@@ -8,7 +8,6 @@
 				{
 					"Controls": [
 						{
-							"Target": "",
 							"Value": "/ESPM/Rules/PurchaseOrders/PurchaseOrders_GenerateNextPOId.js",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "poIdPrp",
@@ -20,13 +19,12 @@
 							"PlaceHolder": "value"
 						},
 						{
-							"Target": "",
 							"validationProperties": {
 								"ValidationMessage": "Supplier cannot be empty",
-								"ValidationMessageColor": "ff0000",
+								"ValidationMessageColor": "d1722e",
 								"SeparatorBackgroundColor": "000000",
 								"SeparatorIsHidden": false,
-								"ValidationViewBackgroundColor": "fffa00",
+								"ValidationViewBackgroundColor": "0000ffff",
 								"ValidationViewIsHidden": true
 							},
 							"_Type": "Control.Type.FormCell.ListPicker",
@@ -46,26 +44,6 @@
 									"UniqueIdType": "Integer"
 								}
 							}
-						},
-						{
-							"Target": "",
-							"validationProperties": {
-								"ValidationMessage": "Currency cannot be empty",
-								"ValidationMessageColor": "ff0000",
-								"SeparatorBackgroundColor": "000000",
-								"SeparatorIsHidden": true,
-								"ValidationViewBackgroundColor": "fffa00",
-								"ValidationViewIsHidden": true
-							},
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"_Name": "currencyPkr",
-							"AllowMultipleSelection": false,
-							"AllowEmptySelection": false,
-							"Caption": "Currency",
-							"PickerPrompt": "Select Currency ",
-							"OnValueChange": "/ESPM/Rules/PurchaseOrders/PurchaseOrderCreate_OnValueChange.js",
-							"IsPickerDismissedOnSelection": true,
-							"PickerItems": "/ESPM/Rules/Common/CurrencyPickerItems.js"
 						}
 					],
 					"Target": "",

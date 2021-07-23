@@ -3,7 +3,7 @@
 	"OnFailure": "/ESPM/Actions/CreateEntityFailureMessage.action",
 	"OnSuccess": "/ESPM/Actions/CreateEntitySuccessMessage.action",
 	"Properties": {
-		"CurrencyCode": "#Control:currencyPkr/#SelectedValue",
+		"CurrencyCode": "EUR",
 		"PurchaseOrderId": "#Control:poIdPrp/#Value",
 		"SupplierId": "#Control:supplierPkr/#SelectedValue"
 	},

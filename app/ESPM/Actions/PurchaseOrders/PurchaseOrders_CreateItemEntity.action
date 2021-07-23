@@ -26,8 +26,5 @@
 		"Quantity": "#Control:quantityPkr/#SelectedValue",
 		"QuantityUnit": "#Control:quantityUnit/#Value",
 		"TaxAmount": "#Control:taxPrp/#Value"
-	},
-	"Headers": {
-		"Accept": "application/json;IEEE754Compatible=true;ExponentialDecimals=false"
 	}
 }

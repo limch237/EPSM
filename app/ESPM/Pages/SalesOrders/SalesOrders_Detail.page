@@ -7,6 +7,7 @@
 			"Sections": [
 				{
 					"ObjectHeader": {
+						"DetailImage": "sap-icon://sales-order",
 						"Subhead": "{CustomerDetails/FirstName}, {CustomerDetails/LastName}",
 						"StatusText": "$(C,{NetAmount},{CurrencyCode},'',{minimumFractionDigits:2,useGrouping:true})",
 						"SubstatusText": "$(C,{TaxAmount},{CurrencyCode},'',{minimumFractionDigits:2,useGrouping:true})",
