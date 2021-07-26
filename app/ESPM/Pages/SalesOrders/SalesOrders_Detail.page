@@ -25,7 +25,7 @@
 							{
 								"Target": "",
 								"NumberOfLines": 1,
-								"Text": "{ProductId}"
+								"Text": "{ProductDetails_ProductId}"
 							},
 							{
 								"Target": "",
@@ -75,7 +75,7 @@
 					"Target": {
 						"EntitySet": "SalesOrderItems",
 						"Service": "/ESPM/Services/ESPM.service",
-						"QueryOptions": "$filter=SalesOrderId eq '{SalesOrderId}'"
+						"QueryOptions": "$filter=Header_SalesOrderId eq '{SalesOrderId}'"
 					},
 					"_Name": "SectionGridTable0",
 					"Header": {

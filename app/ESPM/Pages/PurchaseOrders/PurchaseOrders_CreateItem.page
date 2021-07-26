@@ -21,18 +21,6 @@
 						},
 						{
 							"Target": "",
-							"Value": "/ESPM/Rules/PurchaseOrders/PurchaseOrders_GenerateNextPOItemNumber.js",
-							"_Type": "Control.Type.FormCell.SimpleProperty",
-							"_Name": "itemNbrPrp",
-							"IsEditable": false,
-							"Styles": {
-								"Value": "read-only"
-							},
-							"Caption": "Item Number",
-							"PlaceHolder": "value"
-						},
-						{
-							"Target": "",
 							"validationProperties": {
 								"ValidationMessage": "Select a Product from list",
 								"ValidationMessageColor": "d1722e",
